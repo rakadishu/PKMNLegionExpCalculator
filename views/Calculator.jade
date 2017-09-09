@@ -1,0 +1,12 @@
+extends BaseLayout
+
+block content
+    link(rel="stylesheet" href="/styles/Calculator.css")
+    script(type='text/javascript' src='/scripts/Calculator.js')
+    div(class="Calculator" id="Calculator")
+    div(class="deadOverlay" id="exportOverlay")
+        h3(class="overlayHeader")
+            |Tip: Click the text area and hit Ctrl+A (Cmd+A for Macs) 
+        textarea(class="exportText" id="exportText" placeholder="YO THERE SHOULD BE TEXT HERE BRUH")
+        button(class="doneButton" id="doneButton")
+            |Got it!

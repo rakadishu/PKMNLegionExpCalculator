@@ -1,0 +1,29 @@
+{
+  "name": "legion_experience_app",
+  "version": "1.0.2",
+  "description": "An app to help a group of users calculate exp values for their art submissions.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ARGardea/LegionExpApp.git"
+  },
+  "author": "Alejandro Gardea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ARGardea/LegionExpApp/issues"
+  },
+  "homepage": "https://github.com/ARGardea/LegionExpApp#readme"
+}
