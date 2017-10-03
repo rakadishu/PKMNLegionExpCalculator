@@ -479,8 +479,8 @@ var Calculator = (function () {
                 expValue: 10
         },
             {
-                title: "Simple Shading",
-                expValue: 10
+                title: "Shading",
+                expValue: 15
         },
             {
                 title: "Basic Background",
