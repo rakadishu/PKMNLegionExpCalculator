@@ -483,10 +483,6 @@ var Calculator = (function () {
                 expValue: 10
         },
             {
-                title: "Complex Shading",
-                expValue: 20
-        },
-            {
                 title: "Basic Background",
                 expValue: 10
         },
@@ -498,10 +494,10 @@ var Calculator = (function () {
                 title: "Complex Background",
                 expValue: 30
         },
-            {
-                title: "Expert Background",
-                expValue: 60
-        },
+//            {
+//                title: "Expert Background",
+//                expValue: 60
+//        },
             {
                 title: "Meme Bonus",
                 expValue: 10
