@@ -271,7 +271,8 @@ var Calculator = (function () {
     function exportExp() {
         calculateTotal();
         var unitWord = Calculator.isSilver ? "silver" : "exp";
-        var result = "Hello! Here is your " + unitWord + " earned:<br/>";
+        var result = "";
+        var totalExp = 0;
 
         for (var i = 0; i < Calculator.cards.length; i++) {
             var targetCard = Calculator.cards[i];
@@ -298,7 +299,8 @@ var Calculator = (function () {
                         cardString += rowString;
                     }
                 }
-                cardString += " = " + targetCard.totalValue + "<br/>";
+                cardString += " = " + targetCard.totalValue + "\n";
+                totalExp += targetCard.totalValue;
                 result += cardString;
             }
         }
@@ -310,7 +312,7 @@ var Calculator = (function () {
 //        } else {
 //            result += "<b>Total Exp:" + Calculator.fullTotal + "</b><br/>";
 //        }
-        result += "((Add any cameos here!))";
+        result += "\nHello! Here is your total " + unitWord + " earned: " + totalExp;
         document.getElementById("exportText").value = result;
         openExport();
     }
