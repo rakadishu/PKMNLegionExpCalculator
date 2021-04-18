@@ -413,11 +413,7 @@ var Calculator = (function () {
         isSilver: false,
         options: [
             {
-                title: "Sketch Headshot",
-                expValue: 5
-        },
-            {
-                title: "Sketch Waist Up",
+                title: "Sketch Half",
                 expValue: 10
         },
             {
@@ -425,36 +421,12 @@ var Calculator = (function () {
                 expValue: 15
         },
             {
-                title: "Full Art headshot",
-                expValue: 15
-        },
-            {
-                title: "Full Art Waist Up",
+                title: "Full Art Half",
                 expValue: 20
         },
             {
                 title: "Full Art Fullbody",
                 expValue: 30
-        },
-            {
-                title: "Pixel Icon",
-                expValue: 15
-        },
-            {
-                title: "Pixel Headshot",
-                expValue: 10
-        },
-            {
-                title: "Pixel Fullbody",
-                expValue: 20
-        },
-            {
-                title: "Pixel Animated Bonus",
-                expValue: 10
-        },
-            {
-                title: "Animation Frames",
-                expValue: 5
         },
             {
                 title: "Animation - Simple",
@@ -465,20 +437,8 @@ var Calculator = (function () {
                 expValue: 35
         },
             {
-                title: "Sculpture - Headshot",
-                expValue: 100
-        },
-            {
-                title: "Sculpture - Waist-up",
-                expValue: 150
-        },
-            {
-                title: "Sculpture - Fullbody",
-                expValue: 200
-        },
-            {
                 title: "Flat Colors / Grayscale",
-                expValue: 10
+                expValue: 15
         },
             {
                 title: "Shading",
@@ -490,34 +450,15 @@ var Calculator = (function () {
         },
             {
                 title: "Standard Background",
-                expValue: 20
-        },
-            {
-                title: "Complex Background",
-                expValue: 30
-        },
-//            {
-//                title: "Expert Background",
-//                expValue: 60
-//        },
-            {
-                title: "Meme Bonus",
-                expValue: 10
+                expValue: 25
         },
             {
                 title: "Written (per 100 words)",
                 expValue: 10
-        },
-            {
-                title: "RP Log (per 100 words)",
-                expValue: 10
-        }, {
+        },{
                 title: "Bonus",
                 expValue: 1
-        }, {
-                title: "Cameo",
-                expValue: 25
-        }
+        },
     ],
 
         optionChanged: function (target) {
