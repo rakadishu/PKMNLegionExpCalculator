@@ -453,6 +453,10 @@ var Calculator = (function () {
                 expValue: 25
         },
             {
+                title: "Complex Background",
+                expValue: 50
+        },
+            {
                 title: "Written (per 100 words)",
                 expValue: 10
         },{
