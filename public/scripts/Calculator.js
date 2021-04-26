@@ -19,20 +19,20 @@ var Calculator = (function () {
         fullTotalWrapper.appendChild(fullTotalDisplay);
         controlDiv.appendChild(fullTotalWrapper);
 
-        var silverCheckWrapper = document.createElement("span");
-        silverCheckWrapper.setAttribute("class", "SilverCheckWrapper");
-        silverCheckWrapper.id = "SilverCheckWrapper";
-        silverCheckWrapper.innerHTML = "Silver: ";
+        var multiplierWrapper = document.createElement("span");
+        multiplierWrapper.setAttribute("class", "MultiplierWrapper");
+        multiplierWrapper.id = "multiplierWrapper";
+        multiplierWrapper.innerHTML = "Multiplier: ";
 
-        var silverCheckBox = document.createElement("input");
-        silverCheckBox.setAttribute("type", "checkbox");
-        silverCheckBox.setAttribute("class", "SilverCheckbox");
-        silverCheckBox.id = "SilverCheckbox";
-        silverCheckBox.name = "SilverCheckbox";
-        silverCheckBox.setAttribute("onchange", "Calculator.silverChecked()");
+        var multiplierBox = document.createElement("input");
+        multiplierBox.setAttribute("type", "number");
+        multiplierBox.setAttribute("class", "MultiplierBox");
+        multiplierBox.id = "multiplierBox";
+        multiplierBox.value = 1;
+        multiplierBox.name = "multiplierBox";
 
-        silverCheckWrapper.appendChild(silverCheckBox);
-        controlDiv.appendChild(silverCheckWrapper);
+        multiplierWrapper.appendChild(multiplierBox);
+        controlDiv.appendChild(multiplierWrapper);
 
         var addCardButton = document.createElement("button");
         addCardButton.setAttribute("class", "AddCardButton");
@@ -226,12 +226,8 @@ var Calculator = (function () {
 //        Calculator.cards[targetNum].link = target.value;
 //    }
 
-    function silverChecked() {
-        if (document.getElementById("SilverCheckbox").checked == true) {
-            Calculator.isSilver = true;
-        } else {
-            Calculator.isSilver = false;
-        }
+    function getMultiplier() {
+        return document.getElementById("multiplierBox").value;
     }
 
     function calculateTotal() {
@@ -259,7 +255,11 @@ var Calculator = (function () {
                 fullTotal += workingTotal;
             }
         }
-
+        
+        if(getMultiplier() != 1){
+            fullTotal *= getMultiplier();
+        }
+        
         Calculator.fullTotal = fullTotal;
         document.getElementById("FullTotalDisplay").value = fullTotal;
     }
@@ -270,7 +270,7 @@ var Calculator = (function () {
 
     function exportExp() {
         calculateTotal();
-        var unitWord = Calculator.isSilver ? "silver" : "exp";
+        var unitWord = "silver";
         var result = "";
         var totalExp = 0;
 
@@ -312,6 +312,10 @@ var Calculator = (function () {
 //        } else {
 //            result += "<b>Total Exp:" + Calculator.fullTotal + "</b><br/>";
 //        }
+        if(getMultiplier() != 1){
+            result += "\nApplying a multiplier of " + getMultiplier() + "x...";
+            totalExp *= getMultiplier();
+        }
         result += "\nHello! Here is your total " + unitWord + " earned: " + totalExp;
         document.getElementById("exportText").value = result;
         openExport();
@@ -471,8 +475,8 @@ var Calculator = (function () {
         amountChanged: function (target) {
             amountChanged(target);
         },
-        silverChecked: function () {
-            silverChecked();
+        getMultiplier: function () {
+            getMultiplier();
         },
 //        nameChanged: function (target) {
 //            nameChanged(target);
