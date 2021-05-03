@@ -84,11 +84,11 @@ var Calculator = (function () {
 
         var amountSelect = document.createElement("input");
         amountSelect.setAttribute("type", "number");
-        amountSelect.setAttribute("min", 0);
+        amountSelect.setAttribute("min", 1);
         amountSelect.setAttribute("class", "AmountSelect");
         amountSelect.id = "AmountSelect" + index;
         amountSelect.name = "AmountSelect" + index;
-        amountSelect.value = 0;
+        amountSelect.value = 1;
         amountSelect.setAttribute("onchange", "Calculator.amountChanged(this)");
         optionRow.appendChild(amountSelect);
 
