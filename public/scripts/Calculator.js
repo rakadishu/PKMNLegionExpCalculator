@@ -382,7 +382,7 @@ var Calculator = (function () {
 
         targetCard.rows.push({
             selectedOption: 0,
-            amount: 0,
+            amount: 1,
             active: true,
             total: 0
         });
